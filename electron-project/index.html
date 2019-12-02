@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="index.js"></script>  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+    <!--
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    -->
+  
+  <title>Inicio sesion</title>
+</head>
+
+<body>
+  <form action="./procesaFormulario.php" name="telefonica">
+    <h1>Bienvenido</h1>
+    <fieldset name="login">
+      <label for="usuario"> Usuario:</label>
+      <input class="login" type="text" id="login" maxlength="30" value="" /> <br />
+      <label for="password"> Contraseña:</label>
+      <input class="login" type="text" id="password" maxlength="60" value="" /> <br />
+    </fieldset>
+  </form>
+
+  <br/>
+  <button type="button" class="botones" onclick="ok();"> OK</button>
+  <button type="button" class="botones" onclick="cancel();"> CANCEL </button>
+  
+
+  <br/>
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
 </html>
