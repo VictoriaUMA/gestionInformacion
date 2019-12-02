@@ -9,11 +9,29 @@ function addRowHandlers() {
                 return function() { 
                                         var cell = row.getElementsByTagName("td")[0];
                                         var id = cell.innerHTML;
-                                        alert("id:" + id);
+                                        alert("id:" + id);/*AÑADIR FUNCIÓN PARA CARGAR DATOS CON ESE ID*/ 
                                  };
             };
 
         currentRow.onclick = createClickHandler(currentRow);
     }
 }
-window.onload = addRowHandlers();
+
+function insertar(){
+    alert("Insertar");
+}
+
+
+function actualizar(){
+    alert("Actualizar");
+}
+
+
+function borrar(){
+    alert("Borrar");
+}
+
+
+function salir(){
+    alert("Salir");
+}

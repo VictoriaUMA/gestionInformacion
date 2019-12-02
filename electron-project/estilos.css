@@ -14,10 +14,6 @@ fieldset{
 	background: yellow;
 }
 
-.login{
-    /*text-align: center;*/
-}
-
 h1{
 	color: black;
 	text-align: center;
@@ -48,4 +44,12 @@ body {
 	font-size: 15px; 
 	line-height: 1.5em;          
 	letter-spacing: 0px;   
+}
+
+.centrar{
+	text-align:center;
+}
+
+.centrar table{
+	margin: 0 auto;
 }

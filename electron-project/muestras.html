@@ -2,113 +2,160 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <script type="text/javascript" src="muestras.js"></script>  
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="muestras.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="muestras.js"></script>
 
-  <title>Inicio sesion</title>
+    <title>Muestras</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="muestras.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
 </head>
-<body>
-        <button>AÑADIR</button>
-        <button>BORRAR</button>
-        <button>EDITAR</button>
-        
-        <br>
-        <br>
 
-    
-          <table id="muestras" class="fixed_header" onclick="addRowHandlers();">
-            <thead >
-              <tr>
-                <td>ID</td>
-                <td>NIF_Paciente</td>
-                <td>Cultivo</td>
-                <td>Solucion</td>
-              </tr>
-            </thead>
-            <tbody >
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>11111111X</td>
-                <td>Sangre</td>
-                <td>10</td>
-              </tr>
-            </tbody>
-          </table>
-  
-        <script src="./renderer.js"></script>  
-        </body>
-        
-        </html>
-     
+<body class="container">
+    <form name="inicioSesion">
+        <h1>Muestras</h1>
+        <fieldset name="fmuestras">
+
+            <div class="centrar">
+                <table id="muestras" class="fixed_header" onclick="addRowHandlers();">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>NIF_Paciente</td>
+                            <td>Cultivo</td>
+                            <td>Solucion</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr> <br>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>11111111X</td>
+                            <td>Sangre</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <label for="id"> ID:</label>
+            <input class="login" type="text" id="id" maxlength="30" value="" /> <br />
+            <label for="nif"> NIF:</label>
+            <input class="login" type="text" id="nif" maxlength="30" value="" /> <br />
+            <label for="cultivo"> Cultivo:</label>
+            <input class="login" type="text" id="cultivo" maxlength="30" value="" /> <br />
+
+            <label for="solucion">Solucion</label> <br />
+            <select size="3" name="solucion" id="solucion">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                
+            </select>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </fieldset>
+    </form>
+    <br/>
+    <div class="centrar">
+        <button type="button" class="botones" onclick="insertar();"> Insertar</button>
+        <button type="button" class="botones" onclick="borrar();"> Borrar</button>
+        <button type="button" class="botones" onclick="actualizar();"> Actualizar</button>
+        <button type="button" class="botones" onclick="salir();"> Salir</button>
+    </div>
+    <br/>
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
+
 </html>

@@ -1,27 +1,45 @@
-.fixed_header{
+.fixed_header {
     width: 400px;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
-.fixed_header tbody{
-  display:block;
-  width: 100%;
-  overflow: auto;
-  height: 100px;
+.fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 100px;
 }
 
 .fixed_header thead tr {
-   display: block;
+    display: block;
 }
 
 .fixed_header thead {
-  background: black;
-  color:#fff;
+    background: black;
+    color: #fff;
 }
 
-.fixed_header th, .fixed_header td {
-  padding: 5px;
-  text-align: left;
-  width: 200px;
+.fixed_header th,
+.fixed_header td {
+    padding: 5px;
+    text-align: left;
+    width: 200px;
+}
+
+.f {
+    font-size: large;
+}
+
+.select {
+    size: 3;
+}
+
+select {
+    width: 100%;
+}
+
+.select-dropdown {
+    overflow: auto !important;
+    height: 150px;
 }
