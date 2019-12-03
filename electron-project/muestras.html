@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="muestras.js"></script>
-
     <title>Muestras</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,9 +10,10 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
-    <link rel="stylesheet" type="text/css" href="muestras.css">
+    <script src="./renderer.js"></script>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-
+    <link rel="stylesheet" type="text/css" href="muestras.css">
+    <script type="text/javascript" src="muestras.js"></script>
     <script>
         $(document).ready(function() {
             $('select').material_select();
@@ -26,7 +25,6 @@
     <form name="inicioSesion">
         <h1>Muestras</h1>
         <fieldset name="fmuestras">
-
             <div class="centrar">
                 <table id="muestras" class="fixed_header" onclick="addRowHandlers();">
                     <thead>
@@ -114,7 +112,6 @@
                 </table>
             </div>
 
-
             <label for="id"> ID:</label>
             <input class="login" type="text" id="id" maxlength="30" value="" /> <br />
             <label for="nif"> NIF:</label>
@@ -136,26 +133,23 @@
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                
+
             </select>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </fieldset>
     </form>
-    <br/>
+    <br />
     <div class="centrar">
         <button type="button" class="botones" onclick="insertar();"> Insertar</button>
         <button type="button" class="botones" onclick="borrar();"> Borrar</button>
         <button type="button" class="botones" onclick="actualizar();"> Actualizar</button>
         <button type="button" class="botones" onclick="salir();"> Salir</button>
     </div>
-    <br/>
-    <script src="./renderer.js"></script>
+    <br />
 </body>
-
-</html>
 
 </html>

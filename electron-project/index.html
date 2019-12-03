@@ -2,23 +2,16 @@
 <html>
 
 <head>
+    <title>Inicio sesion</title>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="index.js"></script>
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <!--
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    -->
-
-    <title>Inicio sesion</title>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="./renderer.js"></script>
 </head>
 
 <body class="container">
-
     <form name="inicioSesion">
         <h1>Bienvenido</h1>
         <fieldset name="login">
@@ -28,16 +21,12 @@
             <input class="login" type="text" id="password" maxlength="60" value="" /> <br />
         </fieldset>
     </form>
-
-    <br/>
+    <br />
     <div class="centrar">
         <button type="button" class="botones" onclick="ok();"> OK</button>
         <button type="button" class="botones" onclick="cancel();"> CANCEL </button>
     </div>
-
-    <br/>
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <br />
 </body>
 
 </html>

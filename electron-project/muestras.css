@@ -1,3 +1,5 @@
+/*Archivo de muestras*/
+
 .fixed_header {
     width: 400px;
     table-layout: fixed;
@@ -27,19 +29,11 @@
     width: 200px;
 }
 
-.f {
-    font-size: large;
-}
-
-.select {
-    size: 3;
-}
-
-select {
-    width: 100%;
-}
-
 .select-dropdown {
     overflow: auto !important;
     height: 150px;
+}
+
+.centrar table {
+    margin: 0 auto;
 }

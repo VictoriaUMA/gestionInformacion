@@ -1,55 +1,43 @@
-legend{
-	background-color:red;
-	color:white;
+legend {
+    background-color: red;
+    color: white;
 }
 
-
-/*
-fieldset{
-	background-color:grey;
-}
-*/
-.amarillo{
-
-	background: yellow;
+.amarillo {
+    background: yellow;
 }
 
-h1{
-	color: black;
-	text-align: center;
-	text-shadow: 2px 2px grey;
+h1 {
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px grey;
 }
 
-.botones{
-	width: 100px;                            
-	/*background-color: #ffbaab;                  */
-	border-radius: 5px;                            
-    margin: 0;         
-    text-align: center;                   
-    padding: 0px;     
-       
+.botones {
+    width: 100px;
+    /*background-color: #ffbaab;                  */
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    padding: 0px;
 }
 
-.botones1{
-	width: 100px;                            
-	background-color: #dedede;   
-	margin: 0px;                            
-	padding: 2px;  
+.botones1 {
+    width: 100px;
+    background-color: #dedede;
+    margin: 0px;
+    padding: 2px;
 }
 
-body {         
-	margin: 0;                            
-	padding: 0;              
-	background: white;                                          
-	font-size: 15px; 
-	line-height: 1.5em;          
-	letter-spacing: 0px;   
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: 0px;
 }
 
-.centrar{
-	text-align:center;
-}
-
-.centrar table{
-	margin: 0 auto;
+.centrar {
+    text-align: center;
 }
