@@ -9,9 +9,12 @@ function ok() {
     select($query,function(result){
         output = result;
         console.table(output);
+        if(output[0] != undefined){
+            alert("TODO: ABRIR MUESTRAS");
+        } else {
+            alert("Usuario incorrecto");
+        }
     });
-
-    alert("Vamos a iniciar sesion");  
 }
 
 function cancel() {
