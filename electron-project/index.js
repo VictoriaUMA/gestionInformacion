@@ -1,10 +1,7 @@
-function ok () { 
-	alert("Vamos a iniciar sesion");
+function ok() {
+    alert("Vamos a iniciar sesion");
 }
 
-function cancel () { 
-	alert("CANCEL");
+function cancel() {
+    alert("CANCEL");
 }
-
-
-
