@@ -11,13 +11,14 @@ var connection = mysql.createConnection(
 connection.connect();  
 
 
-function select(query){
-   connection.query(query, function(err, rows, fields) {
-    if(err){
+function select(query,callback){
+    connection.query(query, function(err, rows, fields) {
+        if(err){
             console.log("An error ocurred performing the query.");
             console.log(err);
             return;
             }
         console.log("Query succesfully executed", rows);
+        return callback(rows);
     });
 }

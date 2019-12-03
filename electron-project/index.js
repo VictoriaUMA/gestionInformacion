@@ -1,5 +1,11 @@
 function ok() {
-    console.log(select("SELECT * FROM tUsuario;"));
+    var output = '';
+
+    select("SELECT * FROM tUsuario;",function(result){
+        output = result;
+        console.log(output);
+    });
+
     alert("Vamos a iniciar sesion");  
 }
 
