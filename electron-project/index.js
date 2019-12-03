@@ -1,5 +1,6 @@
 function ok() {
-    alert("Vamos a iniciar sesion");
+    console.log(select("SELECT * FROM tUsuario;"));
+    alert("Vamos a iniciar sesion");  
 }
 
 function cancel() {
