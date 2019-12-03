@@ -2,16 +2,30 @@ const electron = require('electron')
 const path = require('path')
 const BrowserWindow = electron.remote.BrowserWindow
 
-const notifyBtn = document.getElementById('notifyBtn')
+function ok() {
+    var output = '';
+    var usuario = document.getElementById("usuario").value;
+    var password = document.getElementById("password").value;
+    console.log("\n user: " + usuario + "\n pass:" + password);
+    $query = "SELECT * FROM practicaGI.tUsuario WHERE nif = '" + usuario + "' AND password = '" + password + "';";
+    console.log($query);
+    select($query,function(result){
+        output = result;
 
-notifyBtn.addEventListener('click', function (event) {
-	const modalPath = path.join('file://', __dirname, 'muestras.html')  
-	let win = new BrowserWindow({ frame: true, 
-		transparent: false, 
-		width: 800, 
-		height: 600 })
-	win.on('close', function () { win = null })
-	win.loadURL(modalPath)
-	win.show()
-})
+        console.table(output);
+        if(output[0] != undefined){
+            const modalPath = path.join('file://', __dirname, 'muestras.html')
+            let win = new BrowserWindow({ frame: true, 
+                transparent: false, 
+                width: 800, 
+                height: 600 })
+            win.on('close', function () { win = null })
+            win.loadURL(modalPath)
+            win.show();
+        } else {
+            alert("Usuario incorrecto");      
+        }
+    });
 
+
+}

@@ -1,3 +1,6 @@
+const path = require('path')
+const BrowserWindow = electron.remote.BrowserWindow
+
 function ok() {
     var output = '';
     var usuario = document.getElementById("usuario").value;
@@ -6,15 +9,26 @@ function ok() {
     $query = "SELECT * FROM practicaGI.tUsuario WHERE nif = '" + 
     usuario + "' AND password = '" + password + "';";
 
+    const modalPath = path.join('file://', __dirname, '../muestras.html');
+            var win = new BrowserWindow({ frame: true, 
+                transparent: false, 
+                width: 800, 
+                height: 600 });
+            win.on('close', function () { win = null });
+            win.loadURL(modalPath);
+            win.show();
+
     select($query,function(result){
         output = result;
         console.table(output);
         if(output[0] != undefined){
-            alert("TODO: ABRIR MUESTRAS");
+            
         } else {
-            alert("Usuario incorrecto");
+            alert("Usuario incorrecto");      
         }
     });
+
+
 }
 
 function cancel() {
