@@ -26,7 +26,7 @@ function addRowHandlers() {
                     var nif = row.getElementsByTagName("td")[1].innerHTML;
                     var cultivo = row.getElementsByTagName("td")[2].innerHTML;
                     var solucion = row.getElementsByTagName("td")[3].innerHTML;
-                    alert("id:" + id); /*AÑADIR FUNCIÓN PARA CARGAR DATOS CON ESE ID*/
+                    
                     document.getElementById('id').value=id;
                     document.getElementById('nif').value=nif;
                     document.getElementById('cultivo').value=cultivo;
