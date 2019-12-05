@@ -6,15 +6,17 @@ function ok() {
     var password = document.getElementById("password").value;
     console.log("\n user: " + usuario + "\n pass:" + password);
     $query = "SELECT * FROM practicaGI.tUsuario WHERE nif = '" + 
-    usuario + "' AND password = '" + password + "';";
+    usuario + "';";
 
     select($query,function(result){
         output = result;
         console.table(output);
-        if(output[0] != undefined){
+        if(output[0] == undefined){
+            alert("Usuario incorrecto"); 
+        } else if(output[0].password == password){
 	        location.replace('muestras.html');
         } else {
-            alert("Usuario y/o contraseña incorrecto");      
+            alert("Contraseña incorrecta");      
         }
     });
 
