@@ -43,6 +43,7 @@ function insertar() {
 
 function actualizar() {
     alert("Actualizar");
+    borrarFilasBD();
     cargarFilasBD();
 }
 
@@ -57,12 +58,31 @@ function cargarFilasBD(){
     select($query,function(result){
         output = result;
         console.table(output);
+        var table = document.getElementById("muestras");
+        output.forEach(function(row){
+            var newRow = table.insertRow(2);
+
+            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+            var cell0 = newRow.insertCell(0);
+            var cell1 = newRow.insertCell(1);
+            var cell2 = newRow.insertCell(2);
+            var cell3 = newRow.insertCell(3);
+
+            // Add some text to the new cells:
+            cell0.innerHTML = row.ID;
+            cell1.innerHTML = row.NIF_Paciente;
+            cell2.innerHTML = row.Cultivo;
+            cell3.innerHTML = row.Solucion;
+
+        });
+
+        table.deleteRow(1);
     });
 }
 
 function borrarFilasBD(){
     var table = document.getElementById("muestras");
-    for(var i = table.rows.length - 1; i > 0; i--)
+    for(var i = table.rows.length - 1; i > 1; i--)
     {
         table.deleteRow(i);
     }
