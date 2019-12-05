@@ -30,7 +30,7 @@
 }
 
 .select-dropdown {
-    overflow: auto !important;
+    overflow: auto;
     height: 150px;
 }
 

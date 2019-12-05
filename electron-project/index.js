@@ -12,10 +12,9 @@ function ok() {
         output = result;
         console.table(output);
         if(output[0] != undefined){
-            alert("ABRIR VENTANA");
-	location.replace('muestras.html');
+	        location.replace('muestras.html');
         } else {
-            alert("Usuario incorrecto");      
+            alert("Usuario y/o contraseña incorrecto");      
         }
     });
 
