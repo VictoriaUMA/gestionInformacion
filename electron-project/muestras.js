@@ -43,14 +43,30 @@ function insertar() {
 
 function actualizar() {
     alert("Actualizar");
+    cargarFilasBD();
 }
 
 
 function borrar() {
-    alert("Borrar");
+    borrarFilasBD();
 }
 
+function cargarFilasBD(){
+    $query = "SELECT * FROM tMuestra;"
 
+    select($query,function(result){
+        output = result;
+        console.table(output);
+    });
+}
+
+function borrarFilasBD(){
+    var table = document.getElementById("muestras");
+    for(var i = table.rows.length - 1; i > 0; i--)
+    {
+        table.deleteRow(i);
+    }
+}
 function salir() {
     alert("Salir");
 }
