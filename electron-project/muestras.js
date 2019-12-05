@@ -91,5 +91,6 @@ function borrarFilasBD() {
     table.deleteRow(1);
 }
 function salir() {
-    alert("Salir");
+    // alert("Salir");
+    location.replace("index.html");
 }
