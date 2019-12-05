@@ -1,5 +1,5 @@
 cargarFilasBD();
-
+cargarSoluciones();
 
 function addRowHandlers() {
     var table = document.getElementById("muestras");
@@ -8,8 +8,8 @@ function addRowHandlers() {
         var currentRow = table.rows[i];
         currentRow.backgroundColor = "white";
         var createClickHandler =
-            function (row) {
-                return function () {
+            function(row) {
+                return function() {
                     var z = document.getElementById("muestras").getElementsByTagName("td");
                     for (let y = 4; y < z.length; y++) {
                         z[y].style.background = "white";
@@ -26,11 +26,10 @@ function addRowHandlers() {
                     var nif = row.getElementsByTagName("td")[1].innerHTML;
                     var cultivo = row.getElementsByTagName("td")[2].innerHTML;
                     var solucion = row.getElementsByTagName("td")[3].innerHTML;
-                    alert("id:" + id); /*AÑADIR FUNCIÓN PARA CARGAR DATOS CON ESE ID*/
-                    document.getElementById('id').value=id;
-                    document.getElementById('nif').value=nif;
-                    document.getElementById('cultivo').value=cultivo;
-                    //document.getElementById('solucion').value=solucion; // No sé hacerlo de momento
+                    document.getElementById('id').value = id;
+                    document.getElementById('nif').value = nif;
+                    document.getElementById('cultivo').value = cultivo;
+                    setSolucionSeleccionada(solucion);
                 };
             };
 
@@ -40,10 +39,8 @@ function addRowHandlers() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('select');
-    var options = document.querySelectorAll('option');
-    var instances = M.FormSelect.init(elems, options);
+document.addEventListener('DOMContentLoaded', function() {
+    actualizarListaSoluciones();
 });
 
 function insertar() {
@@ -55,19 +52,18 @@ function actualizar() {
     alert("Actualizar");
 }
 
-
 function borrar() {
-    alert("Actualizar");
+    alert("borrar");
 }
 
 function cargarFilasBD() {
     $query = "SELECT * FROM tMuestra;"
 
-    select($query, function (result) {
+    select($query, function(result) {
         output = result;
         console.table(output);
         var table = document.getElementById("muestras");
-        output.forEach(function (row) {
+        output.forEach(function(row) {
             var newRow = table.insertRow();
 
             // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
@@ -96,7 +92,55 @@ function borrarFilasBD() {
     table.insertRow(2);
     table.deleteRow(1);
 }
+
 function salir() {
-    // alert("Salir");
     location.replace("index.html");
+}
+
+/*------LISTA SOLUCIONES----------------------------------------------------------*/
+function insertarSelect(texto, valor) {
+    var x = document.getElementById("mySelect");
+    var option = document.createElement("option");
+    option.text = texto;
+    option.value = valor;
+    x.add(option);
+    actualizarListaSoluciones();
+}
+
+function setSolucionSeleccionada(valor) {
+    var sel = document.getElementById('mySelect');
+
+    var opts = sel.options;
+    for (var opt, j = 0; opt = opts[j]; j++) {
+        if (opt.value == valor.toString()) {
+            sel.selectedIndex = j;
+            break;
+        }
+    }
+    actualizarListaSoluciones();
+}
+
+function getSolucionSeleccionada() {
+    alert(document.getElementById("mySelect").value);
+}
+
+
+function cargarSoluciones() {
+    $query = "SELECT * FROM tSolucion;"
+
+    select($query, function(result) {
+        output = result;
+        console.table(output);
+
+        for (let i = 0; i < output.length; i++) {
+            insertarSelect(output[i].Solucion, output[i].ID);
+        }
+
+    });
+}
+
+function actualizarListaSoluciones() {
+    var elems = document.querySelectorAll('select');
+    var options = document.querySelectorAll('option');
+    var instances = M.FormSelect.init(elems, options);
 }
