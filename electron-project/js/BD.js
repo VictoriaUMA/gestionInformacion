@@ -1,15 +1,14 @@
 var mysql = require('mysql');
 
-var connection = mysql.createConnection(
-    {
-        host: 'aps.salastroya.com',
-        port: '3306',
-        user: 'GI',
-        password: 'GI2019',
-        database: 'practicaGI'
-    });
+var connection = mysql.createConnection({
+    host: 'aps.salastroya.com',
+    port: '3306',
+    user: 'GI',
+    password: 'GI2019',
+    database: 'practicaGI'
+});
 
-connection.connect(function (err) {
+connection.connect(function(err) {
     if (err) {
         alert('Error connecting: ' + err.stack);
         return;
@@ -19,7 +18,7 @@ connection.connect(function (err) {
 });
 
 function select(query, callback) {
-    connection.query(query, function (err, rows,fields) {
+    connection.query(query, function(err, rows, fields) {
         if (err) {
             console.log("An error ocurred performing the query.");
             console.log(err);
@@ -31,7 +30,7 @@ function select(query, callback) {
 }
 
 function insertUpdateDelete(query) {
-    connection.query(query, function (err) {
+    connection.query(query, function(err) {
         if (err) {
             console.log("An error ocurred performing the query.");
             console.log(err);
