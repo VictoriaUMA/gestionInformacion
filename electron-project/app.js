@@ -143,7 +143,7 @@ function actualizar() {
         select($query, function(result) {
             output = result;
             console.table(output);
-            if (!(output)) {
+            if (id_form == id_seleccionado || !(output)) {
                 editarTabla(sql);
                 limpiar();
             } else {
