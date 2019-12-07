@@ -114,7 +114,7 @@ function insertar() {
     select($query, function(result) {
         output = result;
         console.table(output);
-        if (!(output)) {
+        if (output[0] == undefined) {
             editarTabla(sql);
             limpiar();
         } else {
