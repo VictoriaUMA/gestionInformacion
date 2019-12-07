@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link rel="stylesheet" type="text/css" href="muestras.css">
     <script src="js/BD.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="muestras.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="./renderer.js"></script>
 </head>
@@ -57,15 +57,16 @@
     </form>
     <br />
     <div class="centrar">
-        <button type="button" class="botones" onclick="insertar();"> Insertar</button>
-        <button type="button" class="botones" onclick="borrar();"> Borrar</button>
-        <button type="button" class="botones" onclick="actualizar();"> Actualizar</button>
-        <button type="button" class="botones" onclick="salir();"> Salir</button>
+        <button type="button" class="botones" id="btnInsertar" onclick="insertar();"> Insertar</button>
+        <button type="button" class="botones" id="btnBorrar" onclick="borrar();"> Borrar</button>
+        <button type="button" class="botones" id="btnActualizar" onclick="actualizar();"> Actualizar</button>
+        <button type="button" class="botones" id="btnSalir" onclick="salir();"> Salir</button>
     </div>
     <br />
     <script>
         cargarFilasBD();
         cargarSoluciones();
+        disableButtons();
     </script>
 </body>
 
